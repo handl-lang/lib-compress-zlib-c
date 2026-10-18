@@ -11,8 +11,8 @@
 --- sdkgen spec (16 MiB). Inputs whose (de)compressed form exceeds it fail
 --- with a zlib error which surfaces as `err` and is re-raised here.
 
-from "../compress" import { Compress, Decompress }
-from "../generated/libz-c-linux-x86_64/zlib" import * as zlib
+from "compress" import { Compress, Decompress }
+from "libz/zlib" import * as zlib
 
 --- Unwrap a generated `Result` — every zlib binding returns
 --- `Result<payload, Errno>`; on `err` we raise with the op name.
