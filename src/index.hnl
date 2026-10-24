@@ -16,13 +16,10 @@ from "libz/zlib" import * as zlib
 
 --- Unwrap a generated `Result` — every zlib binding returns
 --- `Result<payload, Errno>`; on `err` we raise with the op name.
-unwrap := (r, what) ~> do {
-  if tag.tag_of(r) == "err" {
-    error.raise("compress-zlib-c: " + what + " failed")
-  } else {
-    tag.untag(r).value
+unwrap := (r, what) ~> match r {
+    err(_): error.raise("compress-zlib-c: " + what + " failed"),
+    _: r.value
   }
-}
 
 export compress: Compress := (input) ~> do {
   res = unwrap(zlib.compress2(input, 6), "compress2")
