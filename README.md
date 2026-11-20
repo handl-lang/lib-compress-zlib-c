@@ -1,15 +1,14 @@
 # lib-compress-zlib-c
 
-zlib backend for the `compress` contract (raw deflate via `libz`).
-
-Part of the `handl-lang` org split (ADR-0128). History is a `git subtree
-split` of the platform monorepo's `compress-zlib-c/` (via `c`).
+`zlib` backend for the `compress` contract (raw deflate via `libz`).
 
 ## Layout
 
 ```text
-src/        the .hnl sources
-pkg.hnl     dependencies, when any: `{ deps: { <name>: "branch:<ref>" } }`
+src/                     the .hnl sources
+pkg.hnl                  package manifest (deps on compress, libz)
+scripts/hnl-gate.sh      the gate
+ci.sh                    bupha entry
 ```
 
 ## Gate

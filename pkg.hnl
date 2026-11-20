@@ -1,3 +1,11 @@
 -- lib-compress-zlib-c: modules this package provides (entry defaults to
 -- src/index.hnl; N modules resolve to src/<name>/index.hnl).
-{ deps: { compress: "branch:main", libz: "branch:main" }, modules: ["compress-zlib-c"] }
+{
+  deps: { compress: "branch:main", libz: "branch:main" },
+  modules: ["compress-zlib-c"],
+  name: "compress-zlib-c",
+  description: "zlib backend for the compress contract (raw deflate via libz).",
+  license: "MIT",
+  keywords: ["compress", "zlib", "deflate", "backend"],
+  homepage: "https://github.com/handl-lang/lib-compress-zlib-c",
+}
