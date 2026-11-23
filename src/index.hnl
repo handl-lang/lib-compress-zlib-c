@@ -8,7 +8,7 @@
 --- trimmed `Bytes` inside the `{ret, buf, outs}` result record.
 ---
 --- Limit: both directions allocate the fixed `io_buf` capacity from the
---- sdkgen spec (16 MiB). Inputs whose (de)compressed form exceeds it fail
+--- codegen spec (16 MiB). Inputs whose (de)compressed form exceeds it fail
 --- with a zlib error which surfaces as `err` and is re-raised here.
 
 from "compress" import { Compress, Decompress }
