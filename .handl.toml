@@ -1,6 +1,6 @@
 [dependencies]
 compress = { path = "../lib-compress/src" }
-libz = { path = "../lib-libz/handl-packages/generated/libz-c-linux-x86_64" }
+libz = { path = "../lib-libz/handl-packages/generated/libz/libz-c-linux-x86_64" }
 
 # own package
 compress-zlib-c = { path = "src" }

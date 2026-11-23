@@ -2,7 +2,7 @@
 --- contract.
 ---
 --- A thin layer over the generated libz bindings
---- (`generated/libz-c-linux-x86_64/zlib.hnl`, produced by
+--- (`generated/libz/libz-c-linux-x86_64/zlib_c.hnl`, produced by
 --- `generated/libz.sdkgen.yaml`): `compress2`/`uncompress` are zlib's
 --- one-shot entry points and the `io_buf` marshalling returns `destLen`-
 --- trimmed `Bytes` inside the `{ret, buf, outs}` result record.
