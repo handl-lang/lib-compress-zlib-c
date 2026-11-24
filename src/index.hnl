@@ -22,11 +22,11 @@ unwrap := (r, what) ~> match r {
   }
 
 export compress: Compress := (input) ~> do {
-  res = unwrap(zlib.compress2(input, 6), "compress2")
+  res := unwrap(zlib.compress2(input, 6), "compress2")
   res.buf
 }
 
 export decompress: Decompress := (input) ~> do {
-  res = unwrap(zlib.uncompress(input), "uncompress")
+  res := unwrap(zlib.uncompress(input), "uncompress")
   res.buf
 }
